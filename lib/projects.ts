@@ -41,9 +41,13 @@ export type Project = {
   screenshots: Screenshot[];
 };
 
-// NOTE: metric numbers below are seeded estimates derived from the projects'
-// stacks and shape. Replace with measured values from a real eval run before
-// the interview — the structure is what matters; the numbers should be yours.
+// Metrics policy
+// --------------
+// Only structural numbers I can verify by looking at the repo are stated as
+// facts (tool count, content count, frontend count). Runtime numbers
+// (latency, cost, eval pass rate) are labeled "Eval pending" until a real
+// harness run produces them. The 50-prompt eval sets live under evals/ —
+// see evals/README.md to run.
 
 export const projects: Project[] = [
   {
@@ -71,10 +75,10 @@ export const projects: Project[] = [
     ],
     githubUrl: "https://github.com/roshanathomas/casual-scheduling",
     metrics: [
-      { label: "p95 NLP latency", value: "1.4s" },
-      { label: "Cost per plan", value: "$0.003" },
-      { label: "Tool-call success (50-prompt eval)", value: "94%" },
       { label: "Frontends from one backend", value: "3" },
+      { label: "Trip-domain unit tests", value: "20" },
+      { label: "p95 NLP latency", value: "Eval pending" },
+      { label: "Tool-call success (50-prompt eval)", value: "Eval pending" },
     ],
     askMeAbout: [
       "MCP tool design",
@@ -114,7 +118,7 @@ export const projects: Project[] = [
       {
         chose: "Gemini Flash with tool calling",
         rejected: "Gemini Pro",
-        why: "Flash hits 94% tool-selection accuracy on my eval set at ~1/10th the per-call cost. Pro only adds ~2pp at the latency cost users actually notice.",
+        why: "Flash is ~1/10th the per-call cost and noticeably faster end-to-end. The eval set under evals/gather.eval.json will tell us how much accuracy Pro would buy back; default until that's measured is Flash.",
       },
       {
         chose: "Spring AI function-calling",
@@ -212,9 +216,9 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/roshanathomas/smart-personal-agent",
     metrics: [
       { label: "MCP tools exposed", value: "13" },
-      { label: "Avg tool calls per turn", value: "1.2" },
-      { label: "JSON-schema valid responses", value: "96%" },
-      { label: "Cost per turn (Gemini Flash, temp 0.2)", value: "$0.004" },
+      { label: "Backend services", value: "2 (agent + mcp)" },
+      { label: "Eval pass rate (50-prompt set)", value: "Eval pending" },
+      { label: "Cost per turn", value: "Eval pending" },
     ],
     askMeAbout: [
       "Model Context Protocol design",
@@ -352,10 +356,10 @@ export const projects: Project[] = [
     liveUrl: "https://speak.gathermind.app",
     githubUrl: "https://github.com/roshanathomas/storyspeak",
     metrics: [
-      { label: "Pronunciation eval pass rate (200 utterances)", value: "87%" },
-      { label: "Cost per read-along page", value: "$0.011" },
-      { label: "LLM calls gated behind verified consent", value: "100%" },
       { label: "Books × math screens shipped", value: "72 + 28" },
+      { label: "LLM calls gated behind verified consent", value: "100%" },
+      { label: "Pronunciation eval pass rate", value: "Eval pending" },
+      { label: "Cost per read-along page", value: "Eval pending" },
     ],
     askMeAbout: [
       "COPPA-safe LLM gating",
@@ -386,9 +390,9 @@ export const projects: Project[] = [
           "AI features sit behind a just-in-time parental-consent gate — kids never hit an LLM until a verified parent has opted in for that specific child profile.",
       },
       {
-        title: "Prompt-iteration story",
+        title: "Prompt iteration discipline",
         detail:
-          "v1 prompt told the companion to 'be encouraging' → parents reported sycophancy. v3 anchors to specific missed phonemes + a fixed 3-step structure (acknowledge → name → model). Sycophancy rating dropped from 3.8/5 to 0.4/5 on a 30-sample rubric.",
+          "Companion prompts live in versioned files with a rubric that scores 'sycophancy', 'phoneme specificity', and 'tone'. Each prompt change is re-scored against a fixture set before shipping — keeps tone changes from silently regressing pronunciation correction quality.",
       },
     ],
     tradeoffs: [
