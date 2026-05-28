@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html, body {
+  background: #0a0a0f;
+  color: #e7e7ee;
+}
+
+.bg-grid {
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(124, 92, 255, 0.15) 1px, transparent 0);
+  background-size: 32px 32px;
+}
+
+.glow {
+  background: radial-gradient(60% 60% at 50% 0%, rgba(124, 92, 255, 0.25) 0%, transparent 70%);
+}

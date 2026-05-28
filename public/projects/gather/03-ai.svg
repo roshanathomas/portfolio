@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 780" width="390" height="780" role="img" aria-label="Gather — NLP plan creation">
+  <rect width="390" height="780" rx="44" fill="#0f1118"/>
+  <rect x="0" y="0" width="390" height="56" fill="#0a0a0f"/>
+  <text x="195" y="35" fill="#fff" font-family="ui-sans-serif" font-size="14" text-anchor="middle" font-weight="600">✨ Plan with AI</text>
+  <rect x="20" y="80" width="350" height="100" rx="20" fill="#1a1c26" stroke="#7c5cff" stroke-opacity="0.4"/>
+  <text x="40" y="108" fill="#9ca3af" font-family="ui-sans-serif" font-size="11" font-weight="600">YOU TYPED</text>
+  <text x="40" y="138" fill="#e7e7ee" font-family="ui-sans-serif" font-size="14">&quot;Let&apos;s grab dinner with Sarah</text>
+  <text x="40" y="158" fill="#e7e7ee" font-family="ui-sans-serif" font-size="14">and Marcus on Friday&quot;</text>
+  <text x="20" y="220" fill="#7c5cff" font-family="ui-sans-serif" font-size="11" font-weight="600">⚡ GEMINI EXTRACTED</text>
+  <g font-family="ui-sans-serif">
+    <rect x="20" y="240" width="350" height="60" rx="14" fill="#1a1c26"/>
+    <text x="40" y="265" fill="#9ca3af" font-size="11">TITLE</text>
+    <text x="40" y="285" fill="#e7e7ee" font-size="14" font-weight="600">Dinner with Sarah &amp; Marcus</text>
+    <rect x="20" y="310" width="350" height="60" rx="14" fill="#1a1c26"/>
+    <text x="40" y="335" fill="#9ca3af" font-size="11">WHEN</text>
+    <text x="40" y="355" fill="#e7e7ee" font-size="14" font-weight="600">Friday, 7:30 PM</text>
+    <rect x="20" y="380" width="350" height="80" rx="14" fill="#1a1c26"/>
+    <text x="40" y="405" fill="#9ca3af" font-size="11">INVITED</text>
+    <circle cx="50" cy="430" r="14" fill="#5eead4"/><text x="46" y="434" fill="#0f1118" font-size="11" font-weight="700">S</text>
+    <circle cx="80" cy="430" r="14" fill="#ff7a59"/><text x="76" y="434" fill="#0f1118" font-size="11" font-weight="700">M</text>
+    <text x="110" y="434" fill="#e7e7ee" font-size="13">Sarah, Marcus</text>
+  </g>
+  <text x="20" y="510" fill="#5eead4" font-family="ui-sans-serif" font-size="11" font-weight="600">🛠️ MCP TOOL CALLS</text>
+  <g font-family="ui-mono, monospace" font-size="11">
+    <rect x="20" y="525" width="350" height="32" rx="8" fill="#1a1c26"/>
+    <text x="35" y="546" fill="#5eead4">→ createPlanIdea(...)</text>
+    <rect x="20" y="565" width="350" height="32" rx="8" fill="#1a1c26"/>
+    <text x="35" y="586" fill="#5eead4">→ invite(sarah@…, marcus@…)</text>
+    <rect x="20" y="605" width="350" height="32" rx="8" fill="#1a1c26"/>
+    <text x="35" y="626" fill="#5eead4">→ suggestTimes(friday)</text>
+  </g>
+  <rect x="20" y="700" width="350" height="56" rx="28" fill="#7c5cff"/>
+  <text x="195" y="734" text-anchor="middle" fill="#fff" font-family="ui-sans-serif" font-size="15" font-weight="600">Create plan</text>
+</svg>
