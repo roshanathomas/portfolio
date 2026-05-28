@@ -358,8 +358,8 @@ export const projects: Project[] = [
     metrics: [
       { label: "Books × math screens shipped", value: "72 + 28" },
       { label: "LLM calls gated behind verified consent", value: "100%" },
+      { label: "Prod healthcheck p95 (50-sample probe, 2026-05-28)", value: "211 ms" },
       { label: "Pronunciation eval pass rate", value: "Eval pending" },
-      { label: "Cost per read-along page", value: "Eval pending" },
     ],
     askMeAbout: [
       "COPPA-safe LLM gating",
