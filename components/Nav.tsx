@@ -14,6 +14,9 @@ export function Nav() {
           <Link href="/#skills" className="hover:text-white transition">
             Skills
           </Link>
+          <Link href="/evals" className="hover:text-white transition">
+            Evals
+          </Link>
           <Link href="/#about" className="hover:text-white transition">
             About
           </Link>

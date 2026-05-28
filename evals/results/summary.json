@@ -1,0 +1,37 @@
+{
+  "run_date": "2026-05-27",
+  "judge_model": "claude-sonnet-4-6",
+  "projects": [
+    {
+      "project": "gather",
+      "prompts": 50,
+      "pass_rate": 0.86,
+      "threshold": 0.75,
+      "weakest_category": "edge_case",
+      "filed_bugs": ["G29", "G38", "G40"]
+    },
+    {
+      "project": "storyspeak",
+      "prompts": 50,
+      "pass_rate": 0.88,
+      "threshold": 0.80,
+      "blocking_failures": 0,
+      "weakest_category": "robustness",
+      "filed_bugs": ["S44", "S46"]
+    },
+    {
+      "project": "smart-personal-agent",
+      "prompts": 50,
+      "pass_rate": 0.84,
+      "threshold": 0.78,
+      "weakest_category": "data_integrity",
+      "filed_bugs": ["A38", "A21", "A23", "A47"]
+    }
+  ],
+  "totals": {
+    "prompts": 150,
+    "passed": 129,
+    "failed": 21,
+    "pass_rate": 0.86
+  }
+}
