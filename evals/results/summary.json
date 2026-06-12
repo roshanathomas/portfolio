@@ -1,37 +1,60 @@
 {
-  "run_date": "2026-05-27",
+  "status": "pilot_pending",
   "judge_model": "claude-sonnet-4-6",
+  "note": "Eval sets, rubrics, and the runner are authored and committed. A scored pilot run against staging/fixtures is pending; pass rates and category breakdowns will publish here once the harness runs.",
   "projects": [
     {
       "project": "gather",
       "prompts": 50,
-      "pass_rate": 0.86,
       "threshold": 0.75,
-      "weakest_category": "edge_case",
-      "filed_bugs": ["G29", "G38", "G40"]
+      "categories": [
+        "nlp_extraction",
+        "tool_call",
+        "system_message",
+        "multi_turn",
+        "edge_case",
+        "safety",
+        "trips"
+      ],
+      "blocking_rule": null
     },
     {
       "project": "storyspeak",
       "prompts": 50,
-      "pass_rate": 0.88,
-      "threshold": 0.80,
-      "blocking_failures": 0,
-      "weakest_category": "robustness",
-      "filed_bugs": ["S44", "S46"]
+      "threshold": 0.8,
+      "categories": [
+        "reading_companion",
+        "content_selection",
+        "math_tutor",
+        "coppa_gate",
+        "safety",
+        "tts_voice",
+        "robustness",
+        "esl"
+      ],
+      "blocking_rule": "any coppa_gate score of 0 fails the whole run"
     },
     {
       "project": "smart-personal-agent",
       "prompts": 50,
-      "pass_rate": 0.84,
       "threshold": 0.78,
-      "weakest_category": "data_integrity",
-      "filed_bugs": ["A38", "A21", "A23", "A47"]
+      "categories": [
+        "tool_routing",
+        "tool_chaining",
+        "memory",
+        "nutrition_math",
+        "voice_loop",
+        "refusal",
+        "robustness",
+        "ux",
+        "data_integrity"
+      ],
+      "blocking_rule": null
     }
   ],
   "totals": {
     "prompts": 150,
-    "passed": 129,
-    "failed": 21,
-    "pass_rate": 0.86
+    "projects": 3,
+    "rubrics": 3
   }
 }

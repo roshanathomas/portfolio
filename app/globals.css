@@ -20,3 +20,34 @@ html, body {
 .glow {
   background: radial-gradient(60% 60% at 50% 0%, rgba(124, 92, 255, 0.25) 0%, transparent 70%);
 }
+
+/* Print: flip the resume to a clean white sheet and hide site chrome. */
+@media print {
+  html, body {
+    background: #ffffff;
+    color: #111111;
+  }
+  nav, footer, .no-print {
+    display: none !important;
+  }
+  .print-sheet {
+    color: #111111;
+    max-width: none;
+    padding: 0;
+  }
+  .print-sheet a {
+    color: #111111;
+    text-decoration: none;
+  }
+  .print-muted {
+    color: #444444 !important;
+  }
+  .print-accent {
+    color: #5a3ec8 !important;
+  }
+  .print-card {
+    border-color: #dddddd !important;
+    background: transparent !important;
+    break-inside: avoid;
+  }
+}

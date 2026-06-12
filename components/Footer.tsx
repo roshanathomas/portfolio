@@ -12,7 +12,10 @@ export function Footer() {
           >
             LinkedIn
           </a>
-          <a href="mailto:" className="hover:text-white transition">
+          <a
+            href="mailto:roshanathomas@outlook.com"
+            className="hover:text-white transition"
+          >
             Contact
           </a>
         </div>
