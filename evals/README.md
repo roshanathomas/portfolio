@@ -52,13 +52,9 @@ npx tsx evals/run-evals.ts --project smart-personal-agent --target http://localh
 
 ## Pilot run
 
-A pilot pass is committed under [results/](./results/). See:
+Status: **pending.** The eval sets, rubrics, and runner are authored and committed; a scored pilot pass against the staging endpoints (Gather, SPA) and the STT fixture set (StorySpeak) has not been run yet. When it runs, `run-evals.ts` writes a timestamped JSON + markdown report under [results/](./results/) and the [/evals](../app/evals/page.tsx) page surfaces the pass rates and category breakdowns. Until then, runtime numbers in the portfolio are labeled "Eval pending" rather than stated as fact.
 
-- [gather-pilot.md](./results/gather-pilot.md)
-- [storyspeak-pilot.md](./results/storyspeak-pilot.md)
-- [smart-personal-agent-pilot.md](./results/smart-personal-agent-pilot.md)
-
-The pilot was scored by Claude Sonnet 4.6 as the judge against staging endpoints (Gather, SPA) and a deterministic STT fixture set (StorySpeak). Scores and category breakdowns are real artifacts from that run; numbers will move as prompts and system prompts get tuned.
+A real infrastructure measurement that *has* run is committed alongside: [storyspeak-latency-probe-2026-05-28.md](./results/storyspeak-latency-probe-2026-05-28.md) — a 50-sample healthcheck latency probe against production Cloud Run.
 
 ## Why ship this as a portfolio piece
 

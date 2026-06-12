@@ -1,10 +1,28 @@
 import type { Metadata } from "next";
+import { siteUrl } from "@/lib/site";
 import "./globals.css";
 
+const title = "Roshan Thomas — AI Engineer";
+const description =
+  "AI Engineer building production LLM systems — tool-using agents (MCP), multimodal apps, and full-stack platforms on Spring AI + Java 21, shipped to real users.";
+
 export const metadata: Metadata = {
-  title: "Roshan Thomas — AI Engineer",
-  description:
-    "AI Engineer building production agents, RAG systems, and full-stack apps powered by LLMs.",
+  metadataBase: new URL(siteUrl),
+  title,
+  description,
+  alternates: { canonical: "/" },
+  openGraph: {
+    title,
+    description,
+    url: siteUrl,
+    siteName: title,
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+  },
 };
 
 export default function RootLayout({

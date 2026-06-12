@@ -17,6 +17,9 @@ export function Nav() {
           <Link href="/evals" className="hover:text-white transition">
             Evals
           </Link>
+          <Link href="/resume" className="hover:text-white transition">
+            Resume
+          </Link>
           <Link href="/#about" className="hover:text-white transition">
             About
           </Link>
